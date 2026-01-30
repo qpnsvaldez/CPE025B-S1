@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Best Pasta Recipe Survey</title>
+  <style>
+    body {
+      background-color: #FAF7C2;
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 20px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select {
+      width: 250px;
+      padding: 6px 8px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+
+    label strong {
+      font-weight: bold;
+    }
+
+    #submit {
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <h1 id="title">Crowd's Favourite Pasta Recipe and Preferences!</h1>
+  <p id="description">
+    This survey is published to identify the crowd's favourite pasta recipes and their preferences.
+  </p>
+
+  <!-- Survey Form -->
+  <form id="survey-form">
+
+    <!-- Name -->
+    <label id="name-label" for="name"><strong>Name</strong></label><br />
+    <input
+      type="text"
+      id="name"
+      placeholder="Enter your name"
+      required
+    /><br /><br />
+
+    <!-- Email -->
+    <label id="email-label" for="email"><strong>Email</strong></label><br />
+    <input
+      type="email"
+      id="email"
+      placeholder="Enter your email"
+      required
+    /><br /><br />
+
+    <!-- Number -->
+    <label id="number-label" for="number">
+      <strong>How many servings of pasta can you eat?</strong>
+    </label><br />
+    <input
+      type="number"
+      id="number"
+      placeholder="Enter number of servings"
+      min="1"
+      max="20"
+      required
+    /><br /><br />
+
+    <!-- Dropdown -->
+    <label for="dropdown"><strong>Favorite pasta type</strong></label><br />
+    <select id="dropdown" required>
+      <option value="">Select your favorite type</option>
+      <option value="penne">Penne</option>
+      <option value="fettuccini">Fettuccini</option>
+      <option value="gnocchi">Gnocchi</option>
+      <option value="rigatoni">Rigatoni</option>
+      <option value="spaghetti">Spaghetti</option>
+      <option value="macaroni">Macaroni</option>
+      <option value="cavatappi">Cavatappi</option>
+    </select><br /><br />
+
+    <!-- Images -->
+    <p><strong>Top contenders:</strong></p>
+
+    <div style="display: flex; gap: 30px; text-align: center;">
+      <figure>
+        <img
+          src="https://www.preciouscore.com/wp-content/uploads/2024/06/Spaghetti-Bolognese-Chicken.jpg"
+          alt="Spaghetti Pasta"
+          width="200"
+          height="300"
+        />
+        <figcaption>Spaghetti</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="https://www.gimmesomeoven.com/wp-content/uploads/2020/07/Pasta-Carbonara-7.jpg"
+          alt="Carbonara Pasta"
+          width="200"
+          height="300"
+        />
+        <figcaption>Carbonara</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="https://tastefullygrace.com/wp-content/uploads/2023/06/Chicken-Pesto-Pasta-Recipe-1-scaled.jpg"
+          alt="Pesto Pasta"
+          width="200"
+          height="300"
+        />
+        <figcaption>Pesto</figcaption>
+      </figure>
+    </div>
+
+    <br />
+
+    <!-- Radio Buttons -->
+    <p><strong>Preferred sauce consistency:</strong></p>
+    <label>
+      <input type="radio" name="sauce" value="thick" required />
+      Thick
+    </label><br />
+    <label>
+      <input type="radio" name="sauce" value="creamy" />
+      Creamy
+    </label><br />
+    <label>
+      <input type="radio" name="sauce" value="watery" />
+      Watery
+    </label><br /><br />
+
+    <!-- Checkboxes -->
+    <p><strong>Favorite toppings:</strong></p>
+    <label>
+      <input type="checkbox" value="cilantro" />
+      Cilantro
+    </label><br />
+    <label>
+      <input type="checkbox" value="basil" />
+      Basil
+    </label><br />
+    <label>
+      <input type="checkbox" value="parsley" />
+      Parsley
+    </label><br />
+    <label>
+      <input type="checkbox" value="mushroom" />
+      Mushroom
+    </label><br />
+    <label>
+      <input type="checkbox" value="bacon" />
+      Bacon
+    </label><br /><br />
+
+    <!-- Textarea -->
+    <p><strong>Describe what makes the “best” pasta recipe for you:</strong></p>
+    <textarea
+      rows="4"
+      cols="40"
+      placeholder="Share your thoughts..."
+    ></textarea
+    ><br /><br />
+
+    <!-- Submit Button -->
+    <button id="submit" type="submit">Submit</button>
+  </form>
+</body>
+</html>
